@@ -1,0 +1,113 @@
+name: Haskell CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-ubuntu-oldest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test Ubuntu (oldest GHC)
+        uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
+        with:
+          cabal-file: ./get-tested-example.cabal
+          ubuntu-version: latest
+          oldest: true
+          version: get-tested-head
+
+  test-ubuntu-newest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test Ubuntu (newest GHC)
+        uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
+        with:
+          cabal-file: ./get-tested-example.cabal
+          ubuntu-version: latest
+          newest: true
+          version: get-tested-head
+
+  test-ubuntu-all:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test Ubuntu (all GHC)
+        uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
+        with:
+          cabal-file: ./get-tested-example.cabal
+          ubuntu-version: latest
+          version: get-tested-head
+
+  test-macos-oldest:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test macOS (oldest GHC)
+        uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
+        with:
+          cabal-file: ./get-tested-example.cabal
+          macos-version: latest
+          oldest: true
+          version: get-tested-head
+
+  test-macos-newest:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test macOS (newest GHC)
+        uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
+        with:
+          cabal-file: ./get-tested-example.cabal
+          macos-version: latest
+          newest: true
+          version: get-tested-head
+
+  test-macos-all:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test macOS (all GHC)
+        uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
+        with:
+          cabal-file: ./get-tested-example.cabal
+          macos-version: latest
+          version: get-tested-head
+
+  test-windows-oldest:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test Windows (oldest GHC)
+        uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
+        with:
+          cabal-file: ./get-tested-example.cabal
+          windows-version: latest
+          oldest: true
+          version: get-tested-head
+
+  test-windows-newest:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test Windows (newest GHC)
+        uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
+        with:
+          cabal-file: ./get-tested-example.cabal
+          windows-version: latest
+          newest: true
+          version: get-tested-head
+
+  test-windows-all:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test Windows (all GHC)
+        uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
+        with:
+          cabal-file: ./get-tested-example.cabal
+          windows-version: latest
+          version: get-tested-head
