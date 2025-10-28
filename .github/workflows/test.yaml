@@ -22,7 +22,7 @@ jobs:
   test-ubuntu-newest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - name: Test Ubuntu (newest GHC)
         uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
         with:
@@ -34,7 +34,7 @@ jobs:
   test-ubuntu-all:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - name: Test Ubuntu (all GHC)
         uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
         with:
@@ -45,7 +45,7 @@ jobs:
   test-macos-oldest:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - name: Test macOS (oldest GHC)
         uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
         with:
@@ -57,7 +57,7 @@ jobs:
   test-macos-newest:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - name: Test macOS (newest GHC)
         uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
         with:
@@ -69,7 +69,7 @@ jobs:
   test-macos-all:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - name: Test macOS (all GHC)
         uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
         with:
@@ -80,7 +80,7 @@ jobs:
   test-windows-oldest:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - name: Test Windows (oldest GHC)
         uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
         with:
@@ -92,7 +92,7 @@ jobs:
   test-windows-newest:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - name: Test Windows (newest GHC)
         uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
         with:
@@ -104,7 +104,7 @@ jobs:
   test-windows-all:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - name: Test Windows (all GHC)
         uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
         with:
