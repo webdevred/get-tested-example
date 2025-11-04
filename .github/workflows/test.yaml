@@ -7,107 +7,159 @@ on:
     branches: [main]
 
 jobs:
+  test-older-naming-scheme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test with version that uses older naming scheme
+        id: test
+        uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
+        with:
+          cabal-file: ./get-tested-example.cabal
+          ubuntu-version: latest
+          oldest: true
+          version: v0.1.7.0
+      - name: Visa test-matrix med jq
+        shell: bash
+        run: jq '.' <<< "${{ steps.test.outputs.result }}"
+
   test-ubuntu-oldest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Test Ubuntu (oldest GHC)
+        id: test
         uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
         with:
           cabal-file: ./get-tested-example.cabal
           ubuntu-version: latest
           oldest: true
           version: get-tested-head
+      - name: Visa test-matrix med jq
+        shell: bash
+        run: jq '.' <<< "${{ steps.test.outputs.result }}"
 
   test-ubuntu-newest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - name: Test Ubuntu (newest GHC)
+        id: test
         uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
         with:
           cabal-file: ./get-tested-example.cabal
           ubuntu-version: latest
           newest: true
           version: get-tested-head
+      - name: Visa test-matrix med jq
+        shell: bash
+        run: jq '.' <<< "${{ steps.test.outputs.result }}"
 
   test-ubuntu-all:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - name: Test Ubuntu (all GHC)
+        id: test
         uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
         with:
           cabal-file: ./get-tested-example.cabal
           ubuntu-version: latest
           version: get-tested-head
+      - name: Visa test-matrix med jq
+        shell: bash
+        run: jq '.' <<< "${{ steps.test.outputs.result }}"
 
   test-macos-oldest:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v5
       - name: Test macOS (oldest GHC)
+        id: test
         uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
         with:
           cabal-file: ./get-tested-example.cabal
           macos-version: latest
           oldest: true
           version: get-tested-head
+      - name: Visa test-matrix med jq
+        shell: bash
+        run: jq '.' <<< "${{ steps.test.outputs.result }}"
 
   test-macos-newest:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v5
       - name: Test macOS (newest GHC)
+        id: test
         uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
         with:
           cabal-file: ./get-tested-example.cabal
           macos-version: latest
           newest: true
           version: get-tested-head
+      - name: Visa test-matrix med jq
+        shell: bash
+        run: jq '.' <<< "${{ steps.test.outputs.result }}"
 
   test-macos-all:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v5
       - name: Test macOS (all GHC)
+        id: test
         uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
         with:
           cabal-file: ./get-tested-example.cabal
           macos-version: latest
           version: get-tested-head
+      - name: Visa test-matrix med jq
+        shell: bash
+        run: jq '.' <<< "${{ steps.test.outputs.result }}"
 
   test-windows-oldest:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v5
       - name: Test Windows (oldest GHC)
+        id: test
         uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
         with:
           cabal-file: ./get-tested-example.cabal
           windows-version: latest
           oldest: true
           version: get-tested-head
+      - name: Visa test-matrix med jq
+        shell: bash
+        run: jq '.' <<< "${{ steps.test.outputs.result }}"
 
   test-windows-newest:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v5
       - name: Test Windows (newest GHC)
+        id: test
         uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
         with:
           cabal-file: ./get-tested-example.cabal
           windows-version: latest
           newest: true
           version: get-tested-head
+      - name: Visa test-matrix med jq
+        shell: bash
+        run: jq '.' <<< "${{ steps.test.outputs.result }}"
 
   test-windows-all:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v5
       - name: Test Windows (all GHC)
+        id: test
         uses: Kleidukos/get-tested@6e361c980f1f5462df8804a6fb24e3ef04218406
         with:
           cabal-file: ./get-tested-example.cabal
           windows-version: latest
           version: get-tested-head
+      - name: Visa test-matrix med jq
+        shell: bash
+        run: jq '.' <<< "${{ steps.test.outputs.result }}"
