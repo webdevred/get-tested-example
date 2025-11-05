@@ -10,7 +10,7 @@ jobs:
   test-older-naming-scheme:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - name: Test with version that uses older naming scheme
         id: test
         uses: Kleidukos/get-tested@a2bf953460edad0ece4f6ad16fc782dc4381a7c3
@@ -25,7 +25,7 @@ jobs:
   test-ubuntu-oldest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - name: Test Ubuntu (oldest GHC)
         id: test
         uses: Kleidukos/get-tested@a2bf953460edad0ece4f6ad16fc782dc4381a7c3
