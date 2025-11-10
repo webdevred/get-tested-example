@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  test-older-naming-scheme:
+  test-legacy-version1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -18,6 +18,21 @@ jobs:
           cabal-file: ./get-tested-example.cabal
           ubuntu-version: latest
           version: 0.1.7.0
+      - name: Visa test-matrix med jq
+        shell: bash
+        run: jq '.' <<< '${{ steps.test.outputs.matrix }}'
+
+  test-legacy-version2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Test with version that uses older naming scheme
+        id: test
+        uses: Kleidukos/get-tested@a2bf953460edad0ece4f6ad16fc782dc4381a7c3
+        with:
+          cabal-file: ./get-tested-example.cabal
+          ubuntu-version: latest
+          version: 0.1.7.1
       - name: Visa test-matrix med jq
         shell: bash
         run: jq '.' <<< '${{ steps.test.outputs.matrix }}'
