@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v5
       - name: Test with version that uses older naming scheme
         id: test
-        uses: Kleidukos/get-tested@a2bf953460edad0ece4f6ad16fc782dc4381a7c3
+        uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
         with:
           cabal-file: ./get-tested-example.cabal
           ubuntu-version: latest
