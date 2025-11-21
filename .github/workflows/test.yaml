@@ -10,7 +10,7 @@ jobs:
   test-legacy-version1:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Test with version that uses older naming scheme
         id: test
         uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
@@ -25,7 +25,7 @@ jobs:
   test-legacy-version2:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Test with version that uses older naming scheme
         id: test
         uses: Kleidukos/get-tested@a2bf953460edad0ece4f6ad16fc782dc4381a7c3
@@ -40,7 +40,7 @@ jobs:
   test-ubuntu-oldest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Test Ubuntu (oldest GHC)
         id: test
         uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
@@ -56,7 +56,7 @@ jobs:
   test-ubuntu-newest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Test Ubuntu (newest GHC)
         id: test
         uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
@@ -72,7 +72,7 @@ jobs:
   test-ubuntu-all:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Test Ubuntu (all GHC)
         id: test
         uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
@@ -87,7 +87,7 @@ jobs:
   test-macos-oldest:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Test macOS (oldest GHC)
         id: test
         uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
@@ -103,7 +103,7 @@ jobs:
   test-macos-newest:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Test macOS (newest GHC)
         id: test
         uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
@@ -119,7 +119,7 @@ jobs:
   test-macos-all:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Test macOS (all GHC)
         id: test
         uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
@@ -134,7 +134,7 @@ jobs:
   test-windows-oldest:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Test Windows (oldest GHC)
         id: test
         uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
@@ -150,7 +150,7 @@ jobs:
   test-windows-newest:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Test Windows (newest GHC)
         id: test
         uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
@@ -166,7 +166,7 @@ jobs:
   test-windows-all:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Test Windows (all GHC)
         id: test
         uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
