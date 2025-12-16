@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v5
       - name: Test with version that uses older naming scheme
         id: test
-        uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
+        uses: Kleidukos/get-tested@af8071dbeb10f1294069a64b8b44f8ad45afe6bd
         with:
           cabal-file: ./get-tested-example.cabal
           ubuntu-version: latest
@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v5
       - name: Test with version that uses older naming scheme
         id: test
-        uses: Kleidukos/get-tested@a2bf953460edad0ece4f6ad16fc782dc4381a7c3
+        uses: Kleidukos/get-tested@af8071dbeb10f1294069a64b8b44f8ad45afe6bd
         with:
           cabal-file: ./get-tested-example.cabal
           ubuntu-version: latest
@@ -43,7 +43,7 @@ jobs:
       - uses: actions/checkout@v5
       - name: Test Ubuntu (oldest GHC)
         id: test
-        uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
+        uses: Kleidukos/get-tested@af8071dbeb10f1294069a64b8b44f8ad45afe6bd
         with:
           cabal-file: ./get-tested-example.cabal
           ubuntu-version: latest
@@ -59,7 +59,7 @@ jobs:
       - uses: actions/checkout@v5
       - name: Test Ubuntu (newest GHC)
         id: test
-        uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
+        uses: Kleidukos/get-tested@af8071dbeb10f1294069a64b8b44f8ad45afe6bd
         with:
           cabal-file: ./get-tested-example.cabal
           ubuntu-version: latest
@@ -75,7 +75,7 @@ jobs:
       - uses: actions/checkout@v5
       - name: Test Ubuntu (all GHC)
         id: test
-        uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
+        uses: Kleidukos/get-tested@af8071dbeb10f1294069a64b8b44f8ad45afe6bd
         with:
           cabal-file: ./get-tested-example.cabal
           ubuntu-version: latest
@@ -90,7 +90,7 @@ jobs:
       - uses: actions/checkout@v5
       - name: Test macOS (oldest GHC)
         id: test
-        uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
+        uses: Kleidukos/get-tested@af8071dbeb10f1294069a64b8b44f8ad45afe6bd
         with:
           cabal-file: ./get-tested-example.cabal
           macos-version: latest
@@ -106,7 +106,7 @@ jobs:
       - uses: actions/checkout@v5
       - name: Test macOS (newest GHC)
         id: test
-        uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
+        uses: Kleidukos/get-tested@af8071dbeb10f1294069a64b8b44f8ad45afe6bd
         with:
           cabal-file: ./get-tested-example.cabal
           macos-version: latest
@@ -122,7 +122,7 @@ jobs:
       - uses: actions/checkout@v5
       - name: Test macOS (all GHC)
         id: test
-        uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
+        uses: Kleidukos/get-tested@af8071dbeb10f1294069a64b8b44f8ad45afe6bd
         with:
           cabal-file: ./get-tested-example.cabal
           macos-version: latest
@@ -137,7 +137,7 @@ jobs:
       - uses: actions/checkout@v5
       - name: Test Windows (oldest GHC)
         id: test
-        uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
+        uses: Kleidukos/get-tested@af8071dbeb10f1294069a64b8b44f8ad45afe6bd
         with:
           cabal-file: ./get-tested-example.cabal
           windows-version: latest
@@ -153,7 +153,7 @@ jobs:
       - uses: actions/checkout@v5
       - name: Test Windows (newest GHC)
         id: test
-        uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
+        uses: Kleidukos/get-tested@af8071dbeb10f1294069a64b8b44f8ad45afe6bd
         with:
           cabal-file: ./get-tested-example.cabal
           windows-version: latest
@@ -169,7 +169,7 @@ jobs:
       - uses: actions/checkout@v5
       - name: Test Windows (all GHC)
         id: test
-        uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
+        uses: Kleidukos/get-tested@af8071dbeb10f1294069a64b8b44f8ad45afe6bd
         with:
           cabal-file: ./get-tested-example.cabal
           windows-version: latest
