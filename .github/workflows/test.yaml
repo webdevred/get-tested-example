@@ -2,7 +2,7 @@ name: Haskell CI
 
 on:
   push:
-    branches: [main]
+    branches: [main,test]
   pull_request:
     branches: [main]
 
@@ -63,6 +63,22 @@ jobs:
         with:
           cabal-file: ./get-tested-example.cabal
           ubuntu-version: latest
+          newest: true
+          version: get-tested-head
+      - name: Visa test-matrix med jq
+        shell: bash
+        run: jq '.' <<< "${{ steps.test.outputs.result }}"
+
+  test-ubuntu-uwu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Test Ubuntu (newest GHC)
+        id: test
+        uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
+        with:
+          cabal-file: ./get-tested-example.cabal
+          macos-version: [latest, 18.04]
           newest: true
           version: get-tested-head
       - name: Visa test-matrix med jq
