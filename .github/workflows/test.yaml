@@ -78,7 +78,8 @@ jobs:
         uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
         with:
           cabal-file: ./get-tested-example.cabal
-          macos-version: [latest, 18.04]
+          ubuntu-version: "latest, 22.04"
+          macos-version: "latest"
           newest: true
           version: get-tested-head
       - name: Visa test-matrix med jq
