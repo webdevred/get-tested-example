@@ -15,7 +15,7 @@ jobs:
         uses: webdevred/get-tested@b1b72bae5d99ee355358b40b1d2e8aaf82ef4806
         with:
           cabal-file: ./get-tested-example.cabal
-          ubuntu-version: "latest, 22.04"
+          ubuntu-version: "latest,22.04"
           macos-version: "latest"
           newest: true
           version: get-tested-head
