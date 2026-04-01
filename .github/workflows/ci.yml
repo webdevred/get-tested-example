@@ -1,0 +1,20 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-matrix:
+    name: "Generate matrix from cabal"
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Extract the tested GHC versions
+        id: set-matrix
+        uses: Kleidukos/get-tested@d8562f44cf524ed3f4d17011321e978d0f89d4a3
+        with:
+          cabal-file: ./get-tested-example.cabal
+          ubuntu-version: "latest, 22.04"
+          macos-version: "latest"
+          newest: true
+          version: get-tested-head
