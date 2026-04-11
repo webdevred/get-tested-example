@@ -13,7 +13,7 @@ jobs:
         id: set-matrix
         uses: kleidukos/get-tested@v0.1.10.0-rc1
         with:
-          cabal-file: get-tested.cabal
+          cabal-file: get-tested-example.cabal
           ubuntu-version: "24.04, latest"
           macos-version: "latest"
           version: 0.1.10.0-rc1
