@@ -23,3 +23,6 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix: ${{ fromJSON(needs.generate-matrix.outputs.matrix) }}
+    steps:
+      - name: Log version
+        run: echo "${{ matrix.ghc }} on ${{ matrix.os }}"
